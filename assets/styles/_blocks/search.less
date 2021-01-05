@@ -81,6 +81,7 @@
   bottom: 100px;
   margin-left: -270px;
   box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
 }
 
 @media screen and (max-width: 559px), screen and (max-height: 479px) {
@@ -96,7 +97,8 @@
 
 .ins-section-container {
   position: relative;
-  background: #f7f7f7;
+  background: #f7f7f7;    
+  border-radius: 0 0 5px 5px;
 }
 
 .ins-section {
@@ -108,9 +110,16 @@
   padding: 8px 15px;
 }
 
-.ins-section .ins-section-header {
-  color: #9a9a9a;
-  border-bottom: 1px solid #e2e2e2;
+.ins-section {
+  .ins-section-header {
+    color: #9a9a9a;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  &:last-child {
+    .ins-section-header {
+      border: none;
+    }
+  }
 }
 
 .ins-section .ins-slug {

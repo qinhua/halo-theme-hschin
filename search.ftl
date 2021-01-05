@@ -42,7 +42,7 @@
                             <!-- search start -->
                             <form class="s-search">
                                 <i class="fa fa-search" aria-hidden="true"></i>
-                                <input class="text-input" type="search" name="keyword" placeholder="Search..."
+                                <input class="text-input" type="search" name="keyword" placeholder="请输入关键字..."
                                        autocomplete="off" required>
                             </form>
                             <!-- search end -->

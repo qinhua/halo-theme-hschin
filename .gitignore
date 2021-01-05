@@ -16,3 +16,5 @@ bin/
 .factorypath
 
 node_modules
+.DS_Store
+assets/.DS_Store

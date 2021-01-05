@@ -187,7 +187,25 @@ var han = {
             return false;
         });
     },
-
+    initBackToTop: function(){
+      var $backTop = $('#js-go_top')
+      if(!$backTop.length) return 
+      $backTop.gotoTop({
+        offset: 500, //距离顶部的位置
+        speed: 300, //移动到顶部的速度
+        /*     iconSpeed : 300, //icon动画样式的速度*/
+        animationShow: {
+            'opacity': 1,
+            '-webkit-transform': 'translate3d(0,0,0) rotate(360deg)',
+            'transform': 'translate3d(0,0,0) rotate(360deg)'
+        }, //icon动画样式显示时
+        animationHide: {
+            'opacity': 0,
+            '-webkit-transform': 'translate3d(80px,0,0) rotate(0deg)',
+            'transform': 'translate3d(80px,0,0) rotate(0deg)'
+        } //icon动画样式隐藏时
+    });
+    }
 }
 
 $(function () {
@@ -212,6 +230,8 @@ $(function () {
     // han.pagination()
 
     han.getScrollTop()
+
+    han.initBackToTop()
 
 })
 

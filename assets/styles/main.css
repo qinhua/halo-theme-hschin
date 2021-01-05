@@ -1338,7 +1338,7 @@ pre .storage {
   text-transform: uppercase;
   width: 90%;
   margin: 0 auto;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   transition: all 0.3s;
 }
 .site-navigation .menu-item a {
@@ -1374,7 +1374,7 @@ pre .storage {
   -webkit-transition: all 0.6s;
 }
 .site-header .sidebar-toggle {
-  right: 30px;
+  right: 0.6rem;
 }
 .sidebar .sidebar-toggle {
   left: 50%;
@@ -1450,6 +1450,11 @@ pre .storage {
   height: 480px;
   position: relative;
   width: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .bg-cover {
+    height: 200px;
+  }
 }
 .cover-bg {
   -webkit-animation: fadein 1s ease-in-out;
@@ -2250,7 +2255,7 @@ pre .storage {
   height: 46px;
 }
 .rounded {
-  border-radius: 100px!important;
+  border-radius: 100px !important;
 }
 .font-16-to-14 {
   font-size: 16px;
@@ -2275,6 +2280,12 @@ pre .storage {
 }
 .no-show {
   display: none;
+}
+.has-line-number {
+  padding: 0 !important;
+}
+.has-line-number td {
+  line-height: 2rem;
 }
 #socialShare {
   -webkit-transition: all 0.6s;
@@ -2315,7 +2326,6 @@ pre .storage {
   overflow: auto;
   outline: 0;
   -webkit-overflow-scrolling: touch;
-  height: 440px;
   width: 300px;
   box-shadow: 0 0 10px #a9a9a9;
   border-radius: 10px;
@@ -2340,14 +2350,19 @@ pre .storage {
 .closinglayer:hover {
   cursor: pointer;
 }
-.qr_code_zfb,
-.qr_code_wx {
+.qr-code-box {
+  min-height: 50px;
+}
+.qr-code-box img {
+  display: none;
+}
+.qr-code-box img:first-child {
   display: block;
 }
 .switch-btn {
   width: 100%;
   text-align: center;
-  padding-top: 10px;
+  padding: 10px 0;
 }
 .zfb-btn,
 .wx-btn {
@@ -3272,9 +3287,7 @@ a.is-active-link {
   bottom: 5px;
 }
 .header-inner {
-  width: 80%;
-  max-width: 80%;
-  margin: 0 auto;
+  width: 100%;
 }
 .header-inner .menu-items {
   height: 100%;
@@ -3482,6 +3495,7 @@ ul.sub-menu li a:hover {
   bottom: 100px;
   margin-left: -270px;
   box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
 }
 @media screen and (max-width: 559px), screen and (max-height: 479px) {
   .searchbox .searchbox-container {
@@ -3496,6 +3510,7 @@ ul.sub-menu li a:hover {
 .ins-section-container {
   position: relative;
   background: #f7f7f7;
+  border-radius: 0 0 5px 5px;
 }
 .ins-section {
   font-size: 14px;
@@ -3508,6 +3523,9 @@ ul.sub-menu li a:hover {
 .ins-section .ins-section-header {
   color: #9a9a9a;
   border-bottom: 1px solid #e2e2e2;
+}
+.ins-section:last-child .ins-section-header {
+  border: none;
 }
 .ins-section .ins-slug {
   margin-left: 5px;
@@ -4172,6 +4190,9 @@ pre {
 blockquote {
   padding: 10px;
 }
+.post-inner {
+  padding: 0 10px;
+}
 .post-list {
   width: auto;
   padding: 0 14px;
@@ -4182,6 +4203,21 @@ blockquote {
 .post-item .post-item-title a {
   font-size: 1.3rem;
 }
-.post-inner {
-  padding: 0 10px;
+.night .post-item {
+  border-color: #3e3e3e;
+}
+.goTop {
+  cursor: pointer;
+  opacity: 0;
+  position: fixed;
+  z-index: 100;
+  right: 20px;
+  bottom: 20px;
+  -webkit-transform: translate3d(80px, 0, 0) rotate(0deg);
+  transform: translate3d(80px, 0, 0) rotate(0deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.goTop i {
+  font-size: 3rem;
 }

@@ -84,10 +84,10 @@
                 </p>
             </#if>
         </div>
-        <#--  <#if settings.back_to_top!true>
-            <#include "back_to_top.ftl"/>
-        </#if>  -->
-        <a href="#page" class="arrow-up" data-scroll><span class="screen-reader-text">Back to the top</span></a>
+        <#if settings.back_to_top!true>
+          <div class="goTop" id="js-go_top"><i class="fa fa-arrow-circle-up"></i></div>
+          <#--  <a href="#page" class="arrow-up" data-scroll><span class="screen-reader-text">Back to the top</span></a>  -->
+        </#if>
     </div>
 </footer>
 <#include "search-box.ftl"/>

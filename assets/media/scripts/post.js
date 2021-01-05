@@ -41,7 +41,6 @@ var post = {
       e.stopPropagation();
     });
     $(".closinglayer").on("click", function (e) {
-      // $(".qr-code-wrap").hide();
       $(".qr-code-wrap").velocity("transition.expandOut", {
         duration: 300
       });
@@ -184,6 +183,7 @@ var post = {
       hljs.highlightBlock(block);
       if (showLineNumber) {
         $('code.hljs').each(function (i, block) {
+          block.classList.add('has-line-number');
           hljs.lineNumbersBlock(block);
         });
       }

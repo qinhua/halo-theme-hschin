@@ -44,6 +44,7 @@ genernal:
       name: header_logo_height
       label: 菜单 Logo 高度
       type: text
+      default: '20px'
       placeholder: '比如: 20px'
     post_list_style:
       name: post_list_style
@@ -325,26 +326,34 @@ post:
       label: 代码风格
       type: select
       data-type: string
-      default: "tomorrow-night-bright"
+      default: "atom-one-dark"
       options:
+        - value: "atom-one-dark"
+          label: "atom-one-dark"
+        - value: "atom-one-light"
+          label: "atom-one-light"
         - value: "tomorrow-night-bright"
           label: "tomorrow"
+        - value: "agate"
+          label: "agate"
+        - value: "dracula"
+          label: "dracula"
         - value: "solarized-dark"
           label: "solarized-dark"
+        - value: "solarized-light"
+          label: "solarized-light"
+        - value: "androidstudio"
+          label: "androidstudio"
         - value: "atelier-lakeside-light"
           label: "atelier"
-        - value: "atom-one-light"
-          label: "atom"
+        - value: "rainbow"
+          label: "rainbow"
         - value: "github"
           label: "github"
         - value: "github-gist"
           label: "github-gist"
         - value: "kimbie.light"
           label: "kimbie"
-        - value: "paraiso-light"
-          label: "paraiso"
-        - value: "androidstudio"
-          label: "androidstudio"
     enable_code_lineNumber:
       name: enable_code_lineNumber
       label: 代码行号

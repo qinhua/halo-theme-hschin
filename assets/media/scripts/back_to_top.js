@@ -1,95 +1,71 @@
-/*******************************
- * 右下角按钮相关
+/**
+ * Created by doraqiao.
  */
-function smoothBack2Top() {
-  window.scroll({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
+(function($){
+  //参数opt表示后期根据需求设置icon的css属性值
+  jQuery.fn.gotoTop = function(opt){
+      var ele = this;
+      var win = $(window);
+      var doc = $('html,body');
+      var index = false;
 
-function smoothBack2Bottom() {
-  const offsetHeight = document.documentElement.offsetHeight;
-  const scrollHeight = document.documentElement.scrollHeight;
-  window.scroll({
-    top: scrollHeight - offsetHeight,
-    behavior: 'smooth'
-  });
-}
+      //默认icon的css属性值
+      var defaultOpt = {
+          offset : 420,
+          speed : 500,
+          iconSpeed : 200,
+          animationShow : {'opacity' : '1'},
+          animationHide : {'opacity' : '0'}
+      };
 
-function ckBack2Top() {
-  $('#moonToc').removeClass('mm-active');
-  smoothBack2Top();
-}
+      //将自定义icon的css属性值更新到options中
+      var options = $.extend(defaultOpt,opt);
 
-function ckBack2Bottom() {
-  $('#moonToc').removeClass('mm-active');
-  smoothBack2Bottom();
-}
+      //点击icon返回顶部
+      ele.click(function(){
+          doc.animate({scrollTop : '0'},options.speed);
+      });
 
-function ckShowContent() {
-  toggleSmallToc()
+      //判断icon动画样式是不是transform
+      $.each(options.animationShow,function(i){
+          if(i == 'transform'){
+              index = true;
+          }
+      });
 
-  // 模拟点击事件
-  $('.moon-menu-button').trigger("click");
-}
+      //icon动画样式显示时
+      function animateShow(){
+          if(index){
+              ele.css(options.animationShow);
+          }else{
+              ele.stop().animate(options.animationShow,options.iconSpeed);
+          }
+      }
 
-function toggleSmallToc() {
-  var moonContent = $('#moonToc')
-  moonContent.toggleClass('mm-active');
+      //icon动画隐藏时
+      function animateHide(){
+          if(index){
+              ele.css(options.animationHide);
+          }else{
+              ele.stop().animate(options.animationHide,options.iconSpeed);
+          }
+      }
 
-  if (moonContent.hasClass('mm-active')) {
-    moonContent.show();
-  } else {
-    moonContent.hide()
+      //当屏幕的高度大于options.offset时，显示icon（前提是icon事先隐藏了）
+      win.scroll(function(){
+          /*                console.log(win.scrollTop())*/
+          if(win.scrollTop() > options.offset){
+              animateShow();
+          }else{
+              animateHide();
+          }
+      });
+
+      //如果屏幕里顶部的高度大于设置的offset，则直接将icon显示出来（而不是等滚动事件发生后才显示出来）
+      if(win.scrollTop() > options.offset){
+          ele.css(options.animationShow);
+      }else{
+          ele.css(options.animationHide);
+      }
   }
-}
-
-function initMoonToc() {
-  var headerEl = 'h1,h2,h3,h4,h5,h6', //headers
-    content = '.md-content'; //文章容器
-  tocbot.init({
-    tocSelector: '#moonToc',
-    contentSelector: content,
-    headingSelector: headerEl,
-    scrollSmooth: true,
-    isCollapsedClass: '',
-    headingsOffset: 0 - ($('#postHeader').height() + 58),
-    scrollSmoothOffset: -60,
-    hasInnerContainers: false,
-  });
-
-  var moonToc = $('#moonToc');
-  // 没有生成目录
-  if (moonToc && moonToc.children().length === 0) {
-    $('.icon-toc').addClass('hidden');
-  }
-}
-
-function toggleSearchBox() {
-  $('#searchBox').toggleClass('hidden');
-}
-
-function toggleCircle() {
-  var $moonDot = $('g.moon-dot');
-  var firstCircle = $moonDot.children('circle:first');
-  var lastCircle = $moonDot.children('circle:last');
-  var cy = $(firstCircle).attr('cy');
-  if (cy === '0') {
-    $(firstCircle).attr('cx', '0');
-    $(firstCircle).attr('cy', '-.8rem');
-    $(lastCircle).attr('cx', '0');
-    $(lastCircle).attr('cy', '.8rem');
-  } else {
-    $(firstCircle).attr('cx', '-.8rem');
-    $(firstCircle).attr('cy', '0');
-    $(lastCircle).attr('cx', '.8rem');
-    $(lastCircle).attr('cy', '0');
-  }
-}
-
-function ckMoonButton() {
-  // 右下角的小点
-  toggleCircle();
-  $('.moon-menu-items').toggleClass('item-ani');
-}
+}(jQuery));
