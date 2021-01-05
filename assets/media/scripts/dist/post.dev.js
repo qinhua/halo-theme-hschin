@@ -47,12 +47,12 @@ var post = {
       });
     });
     $(".zfb-btn").on("click", function (e) {
-      $(".qr_code_zfb").css("height", "300px");
-      $(".qr_code_wx").css("height", "0");
+      $(".qr_code_wx").hide();
+      $(".qr_code_zfb").show();
     });
     $(".wx-btn").on("click", function (e) {
-      $(".qr_code_wx").css("height", "300px");
-      $(".qr_code_zfb").css("height", "0");
+      $(".qr_code_zfb").hide();
+      $(".qr_code_wx").show();
     });
   },
   // 因为不使用后端渲染目录, 所以如果在发布文章的时候在文章开头加上 [TOC] 会在文章页面开头有一个ul 标签

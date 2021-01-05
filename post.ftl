@@ -66,13 +66,13 @@
                                             onclick="">
                                         <img src="${theme_base!}/assets/media/images/cuplogo-sm.png"
                                              class="right-mrgn-8 support-img" style="height: 16px"/>
-                                        <span id="">Support</span>
+                                        <span id="">赞助我</span>
                                     </button>
                                 </#if>
                                 <#if settings.social_share!false>
                                     <button class="btn-primary btn-primary-light font-bold rounded width-47 height-46 custom-color-secondary-bg share-btn "
                                             onclick="">
-                                        <span id="">Share</span>
+                                        <span id="">分享TA</span>
                                     </button>
                                 </#if>
                             </div>

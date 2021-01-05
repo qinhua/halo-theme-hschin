@@ -138,9 +138,7 @@
   bottom: 5px;
 }
 .header-inner {
-  width: 80%;
-  max-width: 80%;
-  margin: 0 auto;
+  width: 100%;
 }
 .header-inner .menu-items {
   height: 100%;

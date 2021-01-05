@@ -47,12 +47,12 @@ var post = {
       });
     });
     $(".zfb-btn").on("click", function (e) {
-      $(".qr_code_zfb").css("height", "300px");
-      $(".qr_code_wx").css("height", "0");
+      $(".qr_code_wx").hide();
+      $(".qr_code_zfb").show();
     });
     $(".wx-btn").on("click", function (e) {
-      $(".qr_code_wx").css("height", "300px");
-      $(".qr_code_zfb").css("height", "0");
+      $(".qr_code_zfb").hide();
+      $(".qr_code_wx").show();
     });
   },
 

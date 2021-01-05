@@ -25,7 +25,10 @@ if (sidebarToggle)
         sidebarToggle[i].addEventListener(
             'click',
             function (e) {
+                var headCtrl = $('#headerCtrl')
                 var menuCtrl = $('#sidebarToggle')
+                if (headCtrl)
+                    headCtrl.toggleClass('no-show')
                 if (menuCtrl)
                     menuCtrl.toggleClass('menu-ctrl-on')
                 var scrollMenu = $('#scrollMenu')
