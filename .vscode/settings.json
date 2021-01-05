@@ -1,0 +1,11 @@
+{
+    "filewatcher.commands": [
+        {
+            "match": "/*.less",
+            "isAsync": true,
+            "cmd": "cd ${workspaceRoot} && npm run build",
+            "event": "onFileChange"
+        }        
+    ],
+    "compile-hero.disable-compile-files-on-did-save-code": false
+}
