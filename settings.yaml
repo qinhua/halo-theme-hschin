@@ -392,7 +392,7 @@ post:
       label: 返回顶部
       type: radio
       data-type: bool
-      default: false
+      default: true
       options:
         - value: true
           label: 开启

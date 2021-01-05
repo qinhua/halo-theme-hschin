@@ -1,13 +1,11 @@
-# Halo Theme Hshan
+# Halo Theme Hschin
 
-> 本主题基于hshan主题修改，由于被自己改的非常复杂了,所以后续版本在[雪](https://github.com/xzhuz/halo-theme-xue)修改. 喜欢的小伙伴可以去支持
+> 本主题基于hshan主题修改，后续版本在[雪](https://github.com/xzhuz/halo-theme-xue)修改. 喜欢的小伙伴可以去支持
 
 ## 主题预览
-![主题预览](https://github.com/hshanx/halo-theme-hshan/blob/master/screenshot.png )
+![主题预览](https://github.com/qinhua/halo-theme-hschin/blob/master/screenshot.png )
 
-[主题指南](https://baozi.fun/archives/theme-manual)
-
-[预览地址](https://baozi.fun)
+[预览地址](https://bbchin.com)
 
 ## 已实现功能 
 * [x] 日志页面
@@ -16,6 +14,7 @@
 * [x] 页面标题可配置
 * [x] 适配移动端
 * [x] 搜索功能
+* [x] 代码主题选择
 * [x] 代码行号显示
 * [x] 暗夜模式
 * [x] 链接页面分组显示
@@ -47,10 +46,8 @@
 - 2020-2-29 Mermaid绘图的支持
 - 2020-3-6 滚动条可配置， ajax分页，文章页面图片高度可配置
 - 2020-3-21 修复添加播放器之后底部锚点不起作用的问题
-- 2020-3-25 集成 pjax ,适配 halo 1.3.x
-      
-  详细更新日志请[点击](https://baozi.fun/s/update-log)       
-  
+- 2020-3-25 集成 pjax，适配 halo 1.3.x
+- 2021-1-4 修改滚动到顶部，代码主题可配置
           
 
 ### 注意
@@ -58,12 +55,9 @@
 **由于Halo是使用后端渲染目录, 且如果在发布文章的时候在文章开头加上 [TOC] 会在文章页面开头有一个 ul 标签, 
 本主题使用前端渲染目录的时候, 会粗暴的去除文章开头的 ul 列表. 所以建议不要在文章最开头使用列表.**
 
-## 最新版本 1.4.0 及以上已经不适合 halo-1.2.x ，如果使用 halo-1.2.x 请使用 [1.3.11](https://github.com/hshanx/halo-theme-hshan/releases/tag/1.3.11)
-
-
 ## 安装方法
-1. 克隆或者[下载](https://github.com/hshanx/halo-theme-hshan/releases)。
+1. 克隆或者[下载](https://github.com/qinhua/halo-theme-hschin/releases)。
 2. 压缩为 zip 压缩包之后在后台的主题设置直接上传即可使用。
-3. 用Halo的程序拉取 https://github.com/hshanx/halo-theme-hshan.git
+3. 用Halo的程序拉取 https://github.com/qinhua/halo-theme-hschin.git
 
-> 感谢使用 Halo-theme-hshan 主题
+> 感谢使用 Halo-theme-hschin 主题
