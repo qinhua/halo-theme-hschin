@@ -365,6 +365,17 @@ post:
           label: 开启
         - value: false
           label: 关闭
+    enable_code_copy:
+      name: enable_code_copy
+      label: 代码复制
+      type: radio
+      data-type: bool
+      default: false
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
     enabled_mathjax:
       name: enabled_mathjax
       label: Mathjax

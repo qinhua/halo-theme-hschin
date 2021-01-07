@@ -1,29 +1,52 @@
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #76878c!important;
+  background-color: #76878c !important;
 }
+
 pre {
- overflow: initial;
+  overflow: initial;
 }
+
 blockquote {
   padding: 10px 10px 10px 20px;
 }
+
 .post-inner {
   padding: 0 10px;
 }
+
 .post-list {
   width: auto;
   padding: 0 14px;
 }
+
 .post-item {
   border-bottom: 1px solid #eee;
 }
+
 .post-item .post-item-title a {
   font-size: 1.3rem;
 }
+
 .night .post-item {
   border-color: #3e3e3e;
 }
+
+.post-content pre {
+  position: relative;
+}
+
+.hljs-copy-btn {
+  position: absolute;
+  right: 0;
+  color: #6d6d6d;
+  border: none;
+
+  &:hover {
+    color: #9e9b9b;
+  }
+}
+
 .goTop {
   cursor: pointer;
   opacity: 0;
@@ -31,10 +54,11 @@ blockquote {
   z-index: 100;
   right: 20px;
   bottom: 20px;
-  -webkit-transform: translate3d(80px,0,0) rotate(0deg);
-  transform: translate3d(80px,0,0) rotate(0deg);
+  -webkit-transform: translate3d(80px, 0, 0) rotate(0deg);
+  transform: translate3d(80px, 0, 0) rotate(0deg);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+
   i {
     font-size: 3rem;
   }

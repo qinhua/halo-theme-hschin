@@ -1183,7 +1183,7 @@ pre .storage {
 }
 .article-body,
 .article-info {
-  padding: 30px 15% 0;
+  padding: 30px 8% 0;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -4205,6 +4205,18 @@ blockquote {
 }
 .night .post-item {
   border-color: #3e3e3e;
+}
+.post-content pre {
+  position: relative;
+}
+.hljs-copy-btn {
+  position: absolute;
+  right: 0;
+  color: #6d6d6d;
+  border: none;
+}
+.hljs-copy-btn:hover {
+  color: #9e9b9b;
 }
 .goTop {
   cursor: pointer;
